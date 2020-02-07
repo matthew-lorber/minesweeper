@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>minesweeper</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <article id="g-size">
+        <fieldset>
+            <legend>Difficulty</legend>
+            <input id="rad-1" type='radio' name='size' value='10' checked><label for="rad-1">easy</label><br>
+            <input id="rad-2" type='radio' name='size' value='20'><label for="rad-2">medium</label><br>
+            <input id="rad-3" type='radio' name='size' value='25'><label for="rad-3">hard</label><br>
+            <div id="sel"><img id='sizeSelect' src="./none.png"/></div>
+        </fieldset>
+    </article>
+    <article id="board">
+        <section id="face">
+            <span><span id="remaining"></span></span>
+            <span><img id="faceImg" src="./none.png"/></span>
+            <span><span id="timer">000</span></span>
+        </section>
+    </article>
+    
+    
+    <!-- SCRIPT -->
+    <script src="./jquery.3.4.1.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

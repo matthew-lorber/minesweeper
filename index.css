@@ -1,0 +1,116 @@
+@font-face {
+    font-family:gothic;
+    src:url(./DidactGothic-Regular.ttf);
+    font-display:block;
+}
+@font-face {
+    font-family:alien;
+    src:url(./fr-fal1.ttf);
+    font-display:block;
+}
+body {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    cursor:default;
+    font-family:gothic;
+    background:#111;
+    font-size:1rem;
+    line-height:1;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0;
+    padding:0;
+}
+#g-size {
+    user-select:none;
+    color:rgba(255,255,255,0.4);
+    font-family:alien;
+    font-weight:normal;
+}
+#g-size > fieldset {
+    border:1px solid rgba(255,255,255,0.4);
+}
+#g-size > fieldset > legend {
+    font-family:gothic;
+}
+#sel {
+    cursor:pointer;
+    width:100%;
+    text-align:center;
+}
+#board {
+    font-family:monospace;
+    display:none;
+    z-index:0;
+    text-align:center;
+}
+.row {
+    z-index:0;
+}
+input {
+    cursor:pointer;
+}
+.cell {
+    color:rgba(255,255,255,0);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    float:left;
+    width:calc(max(min(2vw,2vh),1.2rem));
+    height:calc(max(min(2vw,2vh),1.2rem));;
+    border:1px solid rgba(255,255,255,0.2);
+    z-index:10;
+    user-select:none;
+}
+img {
+    width:45px;
+    height:45px;
+    filter:grayscale(1);
+}
+#face {
+    width:100%;
+}
+#face > span {
+    width:calc(100% / 3);
+}
+#faceImg {
+    cursor:pointer;
+}
+#timer,
+#remaining {
+    position:relative;
+    font-size:1rem;
+    font-weight:normal;
+    color:rgba(255,255,255,0.4);
+    padding:0 1rem;
+}
+.empty {
+    background-color:rgba(255,255,255,0.2);
+    color:white;
+}
+.full {
+    background-color:rgba(255,255,255,0.3);
+    color:#111;
+}
+.flag {
+    color:rgba(255,255,255,0);
+    background-color:#111;
+    background-image:url("./flag.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+.c1 {color:#1F618D;}
+.c2 {color:#229954;}
+.c3 {color:#CB4335;}
+.c4 {color:#D4AC0D;}
+.c5 {color:#7D3C98;}
+.c6 {color:#2ECC71;}
+.c7 {color:#E74C3C;}
+.c8 {color:#873600;}
