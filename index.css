@@ -92,7 +92,7 @@ img {
     padding:0 1rem;
 }
 .empty {
-    background-color:rgba(255,255,255,0.2);
+    background-color:rgba(0,255,255,0.2);
     color:white;
 }
 .full {
@@ -101,17 +101,9 @@ img {
 }
 .flag {
     color:rgba(255,255,255,0);
-    background-color:#111;
+    background-color:rgba(39,13,13,0.5);
     background-image:url("./flag.png");
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center center;
 }
-.c1 {color:#1F618D;}
-.c2 {color:#229954;}
-.c3 {color:#CB4335;}
-.c4 {color:#D4AC0D;}
-.c5 {color:#7D3C98;}
-.c6 {color:#2ECC71;}
-.c7 {color:#E74C3C;}
-.c8 {color:#873600;}

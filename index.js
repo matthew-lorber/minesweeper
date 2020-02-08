@@ -165,10 +165,8 @@ $("#sizeSelect").click(()=>{
             num = Number(num);
         }
         if ($(this).hasClass("flag")) {
-            $(this).removeClass("flag").addClass("cell"); // remove the flag
-            if (arr0.indexOf(this.id) >= 0) {
-                arr0.splice(arr0.indexOf(this.id),1); // also, splice it out of the reference array
-            }
+            $(this).removeClass("flag"); // remove the flag
+            arr0.splice(arr0.indexOf(this.id),1); // also, splice it out of the reference array
             $("#remaining").html(("00" + Number(num+1)).slice(-3)); // and add back the remaining bomb
         }
         else {
