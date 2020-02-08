@@ -160,18 +160,21 @@ $("#sizeSelect").click(()=>{
         if (mouse !== 3) {return;} // stop if more than one button was clicked
         let num = $("#remaining").html(); // remaining bombs
         if (num.match("-")) { // read num as a number
-            num = Number(num.split("-")[1]) * -1;
+            num = Number(num.split("-")[1]) * -1; // make negative again
         } else {
             num = Number(num);
         }
         if ($(this).hasClass("flag")) {
-            $(this).removeClass().addClass("cell"); // don't just want to remove 'flag', as a flagged bomb removed will still have background and color
-            arr0.splice(arr0.indexOf(this.id),1); // also, splice it out of the reference array
-            $("#remaining").html(("00" + Number(num+1)).slice(-3));
+            $(this).removeClass("flag").addClass("cell"); // remove the flag
+            if (arr0.indexOf(this.id) >= 0) {
+                arr0.splice(arr0.indexOf(this.id),1); // also, splice it out of the reference array
+            }
+            $("#remaining").html(("00" + Number(num+1)).slice(-3)); // and add back the remaining bomb
         }
         else {
-            $(this).addClass("flag");
-            $("#remaining").html(("00" + Number(num-1)).slice(-3));
+            $(this).addClass("flag"); // flag it
+            arr0.push(this.id); // add cell to reference array
+            $("#remaining").html(("00" + Number(num-1)).slice(-3)); // decrement remaining bombs
 
             // WIN CONDITION (my version differs from the original in that you can win by flagging all the bombs correctly, without revealing all the cells)
             if ($("#remaining").html() === "000") {
